@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+  background: #282c34;
+  font-family: sans-serif;
+}
+
+#container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: flex;
+      -ms-flex-pack: flex;
+          justify-content: flex;
+}
+/*# sourceMappingURL=index.css.map */
