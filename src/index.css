@@ -1,6 +1,7 @@
 body {
   padding: 50px;
-  background: #282c34;
+  background: -webkit-gradient(linear, left top, right top, from(#282c34), to(#bfb5ca));
+  background: linear-gradient(to right, #282c34, #bfb5ca);
   font-family: sans-serif;
 }
 
@@ -12,27 +13,51 @@ body {
       -ms-flex-pack: flex;
           justify-content: flex;
   width: 50%;
+  min-width: 250px;
   margin: auto;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+#container div {
+  width: 100%;
 }
 
 .todoListMain {
-  border: 1px solid white;
-  padding: 0;
-  color: white;
+  min-height: 80px;
+  border: 1px solid #bfb5ca;
+  border-radius: 5px;
+  background: #282c34;
+  color: #bfb5ca;
   font-weight: lighter;
 }
 
+.todoListMain .header form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .todoListMain .header input {
+  -webkit-box-flex: 4;
+      -ms-flex: 4 1 0px;
+          flex: 4 1 0;
   padding: 10px;
   font-size: 16px;
-  border: 2px solid #a0a7de;
+  border: 1px solid #bfb5ca;
+  border-top-left-radius: 5px;
+  color: #282c34;
 }
 
 .todoListMain .header button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
   padding: 10px;
-  font-size: 16px;
   background: #282c34;
-  border: 2px solid #a0a7de;
+  border: 1px solid #bfb5ca;
+  border-top-right-radius: 5px;
+  color: #bfb5ca;
 }
 
 .todoListMain ul {
@@ -42,7 +67,10 @@ body {
 
 .todoListMain li {
   padding-top: 10px;
-  border-bottom: 1px solid #b6b5cc;
+  border-bottom: 1px solid #bfb5ca;
+  -o-border-image: linear-gradient(to right, transparent 0%, #91ace0 80%) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(80%, #91ace0)) 1;
+     border-image: linear-gradient(to right, transparent 0%, #91ace0 80%) 1;
   list-style: none;
   font-size: 20px;
 }
