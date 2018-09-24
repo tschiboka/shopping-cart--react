@@ -4,7 +4,7 @@ $gradient: linear-gradient(to right, $primary, $secondary);
 $separator: #91ace0;
 
 body {
-  padding: 50px;
+  padding-top: 50px;
   background: $gradient;
   font-family: sans-serif;
 }
@@ -14,6 +14,7 @@ body {
   justify-content: flex;
   width: 50%;
   min-width: 250px;
+  max-width: 400px;
   margin: auto;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   div {
@@ -47,6 +48,9 @@ body {
       border: 1px solid $secondary;
       border-top-right-radius: 5px;
       color: $secondary;
+      font-size: 16px;
+      text-transform: uppercase;
+      cursor: pointer;
     }
   }
   ul {
@@ -59,8 +63,14 @@ body {
     border-image: linear-gradient(to right, transparent 0%, $separator 80%) 1;
     list-style: none;
     font-size: 20px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
   }
   li:last-child {
     border: none;
+  }
+  li:hover {
+    opacity: 1;
   }
 }

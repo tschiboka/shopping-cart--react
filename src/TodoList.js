@@ -10,10 +10,16 @@ export default class TodoList extends Component {
     };
 
     this.addItem = this.addItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
 
   addItem(e) {
-    if (this._inputElement.value) {
+    const listHasTheItem = () =>
+      this.state.items.filter(item => item.text === this._inputElement.value)
+        .length > 0;
+    console.log(listHasTheItem());
+
+    if (this._inputElement.value && !listHasTheItem()) {
       const newItem = {
         text: this._inputElement.value,
         key: Date.now()
@@ -26,8 +32,13 @@ export default class TodoList extends Component {
       });
     }
     this._inputElement.value = "";
-    console.log(this.state.items);
     e.preventDefault(); // form submit automatically refreshes the page
+  }
+
+  deleteItem(key) {
+    const filteredItems = this.state.items.filter(i => i.key !== key);
+
+    this.setState({ items: filteredItems });
   }
 
   render() {
@@ -39,10 +50,10 @@ export default class TodoList extends Component {
               ref={a => (this._inputElement = a)}
               placeholder="enter task"
             />
-            <button type="submit">add</button>
+            <button type="submit">Add</button>
           </form>
         </div>
-        <TodoItems entries={this.state.items} />
+        <TodoItems entries={this.state.items} delete={this.deleteItem} />
       </div>
     );
   }

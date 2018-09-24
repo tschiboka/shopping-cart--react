@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding-top: 50px;
   background: -webkit-gradient(linear, left top, right top, from(#282c34), to(#bfb5ca));
   background: linear-gradient(to right, #282c34, #bfb5ca);
   font-family: sans-serif;
@@ -14,6 +14,7 @@ body {
           justify-content: flex;
   width: 50%;
   min-width: 250px;
+  max-width: 400px;
   margin: auto;
   -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
           box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
@@ -58,6 +59,9 @@ body {
   border: 1px solid #bfb5ca;
   border-top-right-radius: 5px;
   color: #bfb5ca;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .todoListMain ul {
@@ -73,9 +77,17 @@ body {
      border-image: linear-gradient(to right, transparent 0%, #91ace0 80%) 1;
   list-style: none;
   font-size: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .todoListMain li:last-child {
   border: none;
+}
+
+.todoListMain li:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=index.css.map */
