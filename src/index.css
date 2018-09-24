@@ -11,5 +11,43 @@ body {
   -webkit-box-pack: flex;
       -ms-flex-pack: flex;
           justify-content: flex;
+  width: 50%;
+  margin: auto;
+}
+
+.todoListMain {
+  border: 1px solid white;
+  padding: 0;
+  color: white;
+  font-weight: lighter;
+}
+
+.todoListMain .header input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #a0a7de;
+}
+
+.todoListMain .header button {
+  padding: 10px;
+  font-size: 16px;
+  background: #282c34;
+  border: 2px solid #a0a7de;
+}
+
+.todoListMain ul {
+  margin: 0 0 10px 0;
+  padding: 0 10px;
+}
+
+.todoListMain li {
+  padding-top: 10px;
+  border-bottom: 1px solid #b6b5cc;
+  list-style: none;
+  font-size: 20px;
+}
+
+.todoListMain li:last-child {
+  border: none;
 }
 /*# sourceMappingURL=index.css.map */

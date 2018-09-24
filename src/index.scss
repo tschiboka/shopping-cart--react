@@ -1,10 +1,47 @@
+$primary: #282c34;
+
 body {
   padding: 50px;
-  background: #282c34;
+  background: $primary;
   font-family: sans-serif;
 }
 
 #container {
   display: flex;
   justify-content: flex;
+  width: 50%;
+  margin: auto;
+}
+
+.todoListMain {
+  border: 1px solid white;
+  padding: 0;
+  color: white;
+  font-weight: lighter;
+  .header {
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #a0a7de;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      background: $primary;
+      border: 2px solid #a0a7de;
+    }
+  }
+  ul {
+    margin: 0 0 10px 0;
+    padding: 0 10px;
+  }
+  li {
+    padding-top: 10px;
+    border-bottom: 1px solid #b6b5cc;
+    list-style: none;
+    font-size: 20px;
+  }
+  li:last-child {
+    border: none;
+  }
 }
